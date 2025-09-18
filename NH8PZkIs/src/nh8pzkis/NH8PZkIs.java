@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.nh8pzkis_datastream;
+package nh8pzkis;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -21,7 +21,7 @@ c. Chuyển đổi số nguyên nhận được sang hai hệ cơ số 8 và 16.
 d. Đóng kết nối và kết thúc chương trình.
  
 */
-public class NH8PZkIs_DataStream {
+public class NH8PZkIs {
     static String initMsg = "B22DCCN385;NH8PZkIs";
     static int PORT = 2207;
     static String HOST = "203.162.10.109";
@@ -40,7 +40,7 @@ public class NH8PZkIs_DataStream {
             System.out.println("Received: " + Integer.toString(number));
             String base8 = Integer.toString(number, 8);
             String base16 = Integer.toString(number, 16);
-//            base16 = base16.toUpperCase();
+            base16 = base16.toUpperCase();
             dos.writeUTF(base8);
             dos.flush();
 
@@ -55,7 +55,7 @@ public class NH8PZkIs_DataStream {
             
             
         } catch (IOException ex) {
-            Logger.getLogger(NH8PZkIs_DataStream.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(NH8PZkIs.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
