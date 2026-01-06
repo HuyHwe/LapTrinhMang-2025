@@ -2,15 +2,6 @@ package UDP;
 
 import java.io.Serializable;
 
-/**
-
- Tên đầy đủ lớp: UDP.Book
- Các thuộc tính: id (String), title (String), author (String), isbn (String), publishDate (String)
- Hàm khởi tạo:
- public Book(String id, String title, String author, String isbn, String publishDate)
- Trường dữ liệu: private static final long serialVersionUID = 20251107L
-
-  **/
 public class Book implements Serializable {
     public String id;
     public String title;
